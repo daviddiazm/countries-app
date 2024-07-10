@@ -28,6 +28,9 @@ export class CountryPageComponent implements OnInit {
   //     //   console.log(params['id']);
   //     // })
   // }
+
+  public country ?: Country
+
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
@@ -38,13 +41,11 @@ export class CountryPageComponent implements OnInit {
           this.router.navigateByUrl("/countries/by-region");
         } else {
           this.country = country;
-
         }
       })
   }
 
 
-  public country ?: Country
 
 
 }
